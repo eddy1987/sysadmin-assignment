@@ -4,7 +4,7 @@
 
 This assignment is part of the recruitment process for the System Administrator at Vio.com. The purpose is to assess the technical skills of the candidates in a generic scenario.
 
-Please read carefully all the instructions before starting to work on your solution, and feel free to contact us if you have any doubt.
+Please read carefully all the instructions before starting to work on your solution, and feel free to contact us if you have any doubts.
 
 ## Setup
 
@@ -14,15 +14,15 @@ The repository has the following content:
 
 * A [Dockerfile](./Dockerfile) to build the docker image for the assignment.
 * A [Makefile](./Makefile) to be used to execute all the necessary steps of the assignment.
-* A [ldap](./ldap/) directory with LDIF file to be used as a sample.
+* A [ldap](./ldap/) directory with an LDIF file to be used as a sample.
 
-The `Dockerfile` is based on the OpenLDAP image, with all the necessary commands to used during this exercise.
+The `Dockerfile` is based on the OpenLDAP image, with all the necessary commands to be used during this exercise.
 
 There's also a `Makefile` for reference with a target that executes the two LDIF files as an example. We also have included an empty `run` target, which is the default one for the `make` utility.
 
 ### What we expect
 
-We expect that you add more targets for all steps of your solution to trigger them in the correct order from the `run` target. It means that once executed, LDAP is configured in the right way.
+We expect you to add more targets for all steps of your solution to trigger them in the correct order from the `run` target. It means that once executed, LDAP is configured in the right way.
 
 ### How we will validate your solution
 
@@ -46,22 +46,22 @@ docker run -it --rm viodotcom/assignment
 ldapsearch -x -H ldap://localhost -b dc=viodotcom,dc=com -D "cn=admin,dc=viodotcom,dc=com" -w <passwd>
 ```
 
-We'll also take a look if you created any extra file or edited the current one under the `ldap/` directory.
+We'll also see if you created any extra files or edited the current one under the `ldap/` directory.
 
 ## Assignment
 
 The objective of this assignment is to define and configure a structure for security groups in the Vio.com directory.
-Remember to create the objects necessary in a set of different LDIFs or inside a uniq file, and to add them to the target of the `Makefile` since we want all objects created with the `make` utility.
+Remember to create the objects necessary in a set of different LDIFs or inside a unique file, and to add them to the target of the `Makefile` since we want all objects created with the `make` utility.
 
 Feel free to create diagrams and a `README` to clarify and justify your decisions.
 
 ### The problem
 
-Currently at Vio.com, we have our directory access configured in the SSO system, which gave us much less flexibility than the most used directory systems available on the market, forcing us to have a non-ideal segregation. So, we start to consider migrating to a different system, such as openLDAP.
+Currently, we have our directory access configured in the SSO system, which gives us much less flexibility than the most used directory systems available on the market, forcing us to have a non-ideal segregation. So, we start to consider migrating to a different system, such as OpenLDAP.
 
 However, to decide if it's the right choice, we need to do a PoC and validate a possible setup for the new LDAP with a Directory Information Tree (DIT) that satisfies the following requirements:
 
-* **Team structure:** Inside each team we would have different roles such as Engineer Manager (EM), Tech Lead (TL), Product Manager (PM) and the Engineers (IC).
+* **Team structure:** Inside each team we would have different roles such as Engineer Manager (EM), Tech Lead (TL), Product Manager (PM), and Engineers (IC).
 
 * **Privileges:** Depending on the system we may have different privileges for each role such as `Administrator`, `PowerUser`, `Read Only`.
 
@@ -91,7 +91,7 @@ Currently, we have the following team structure:
 
 ### The systems
 
-For this assignment let's considering the following systems:
+For this assignment let's consider the following systems:
 
 * **Cloud provider (AWS):** Each product has your own AWS account, so you can consider the following setup.
 
