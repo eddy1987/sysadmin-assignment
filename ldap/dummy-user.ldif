@@ -1,0 +1,15 @@
+dn: uid=dummy,ou=people,dc=viodotcom,dc=com
+objectClass: top
+objectClass: account
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: dummy
+uid: dummy
+uidNumber: 11594
+gidNumber: 100
+homeDirectory: /home/dummy
+loginShell: /bin/bash
+userPassword: dummy123
+shadowLastChange: 0
+shadowWarning: 0
+shadowMax: 0
