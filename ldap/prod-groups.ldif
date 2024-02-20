@@ -1,0 +1,37 @@
+# Create Role/Function based groups and adding the dummy user to them due to this version of openldap limitation
+
+# Create TL Group
+dn: cn=TL,ou=Groups,dc=viodotcom,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: TL
+description: Tech Leads
+#member: cn=placeholder,dc=viodotcom,dc=com
+member: uid=11594,ou=People,dc=viodotcom,dc=com
+
+# Create EM Group
+dn: cn=EM,ou=Groups,dc=viodotcom,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: EM
+description: Engineering Managers
+#member: cn=placeholder,dc=viodotcom,dc=com
+member: uid=11594,ou=People,dc=viodotcom,dc=com
+
+# Create PM Group
+dn: cn=PM,ou=Groups,dc=viodotcom,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: PM
+description: Product Managers
+#member: cn=placeholder,dc=viodotcom,dc=com
+member: uid=11594,ou=People,dc=viodotcom,dc=com
+
+# Create IC Group
+dn: cn=IC,ou=Groups,dc=viodotcom,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: IC
+description: Individual Contributors
+#member: cn=placeholder,dc=viodotcom,dc=com
+member: uid=11594,ou=People,dc=viodotcom,dc=com
