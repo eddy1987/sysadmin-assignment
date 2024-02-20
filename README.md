@@ -22,7 +22,7 @@ graph TD;
     Groups --> ProductManager("cn=PM")
     Groups --> EngineeringManager("cn=EM")
     Groups --> IndivisualContributer("cn=IC")
-
+'''
 
 This LDAP structure is organized into three main Organizational Units (OUs): People, Systems, and Groups. Here's a brief outline and the rationale behind each OU
 ### People OU
