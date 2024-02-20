@@ -46,11 +46,13 @@ This LDAP structure is organized into three main Organizational Units (OUs): Peo
 * **Description**: Contains groups for managing roles (and further more access) within the organization. Given the limitations of dynamic groups in the current version of OpenLDAP and to avoid the complexity of modifying the LDAP schema with custom attributes, members of groups under this OU are manually added these groups: TL, EM, PM, and IC.
 
 ## Access Control and Management
-System-level access is managed externally through system ACLs or IAM of that particular/forgion system and/or via external documentation, avoiding unnecessary complexity within the LDAP structure. For example if EM needs to have Admin access on AWS and R/W access on Datadog it would add complexity layer to this DIT structure such as having system-specific-access level of access like (aws-admin, aws-RW, aws-RO, datadog-admin, datadog-RW, and datadog RO) or more generic level of access such (Admin, RW, and RO). Since that system-level permissions are assessed based on roles/functions, already reflected through membership in the groups within our LDAP structure, an assumption that the requirement are met is implied.
+System-level access is managed externally through system ACLs or IAM of that particular/forgion system and/or via external documentation, avoiding unnecessary complexity within the LDAP structure. For example if EM needs to have Admin access on AWS and R/W access on Datadog it would add complexity layer to this DIT structure and overwhelming situation for system admins such as having system-specific-access-level (aws-admin, aws-RW, aws-RO, datadog-admin, datadog-RW, and datadog RO) or more dlap-generic-access-level (Admin, RW, and RO). Since system-level permissions are assessed based on roles/functions, already reflected through membership in the groups within given LDAP structure, an assumption that this requirement is met is implied.
 
-## Implementation Notes
-* This LDAP setup is intended for internal use within Vio.com's IT infrastructure.
-* Modifications and updates to the LDAP structure should be managed by the system administration team, with changes documented and reviewed according to our change management policies.
+## Points of Improvement
+* Use an Up-to-Date Docker image for OpenLDAP to facilitate more ldap features.
+* Hashing users' passwords in the prod-users.ldif file.
+* Clarification on PII and Sensitive/Non-Sensitive Systems.
+* Adding Entrypoint script to run the "make" command instead of typing it manually once the container is fully running and accessible. 
 
 ## Conclusion
-This LDAP structure provides a streamlined and organized approach to managing users, systems, and access within Vio.com. By maintaining a clear and simplified DIT, we aim to enhance both operational efficiency and security.
+This LDAP structure provides a streamlined and organized approach to managing users, systems, and access within Vio.com. By maintaining a clear and simplified DIT, the aim is to enhance both operational efficiency and security.
