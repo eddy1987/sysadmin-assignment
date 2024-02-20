@@ -1,0 +1,4 @@
+# Create the main container where all groups in vio.com go under
+dn: ou=Groups,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Groups
