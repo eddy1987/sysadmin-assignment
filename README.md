@@ -4,6 +4,25 @@ This repository contains the LDAP structure setup for Vio.com, designed to strea
 
 ## Directory Information Tree (DIT) Overview
 
+```mermaid
+graph TD;
+    LDAP("dc=viodotcom,dc=com") --> People("ou=People")
+    LDAP --> System("ou=System")
+    LDAP --> Groups("ou=Groups")
+
+    People --> Engineering("ou=Engineering")
+    Engineering --> Foo("ou=Foo")
+    Engineering --> Platform("ou=Platform")
+    Engineering --> Bar("ou=Bar")
+
+    System --> Sensitive("ou=Sensitive")
+    System --> NonSensitive("ou=NonSensitive")
+
+    Groups --> TechLead("cn=TL")
+    Groups --> ProductManager("cn=PM")
+    Groups --> EngineeringManager("cn=EM")
+    Groups --> IndivisualContributer("cn=IC")
+
 This LDAP structure is organized into three main Organizational Units (OUs): People, Systems, and Groups. Here's a brief outline and the rationale behind each OU
 ### People OU
 * **Path**: ou=People,dc=viodotcom,dc=com
@@ -18,8 +37,8 @@ This LDAP structure is organized into three main Organizational Units (OUs): Peo
 * **Path**: ou=Systems,dc=viodotcom,dc=com
 * **Description**: This OU categorizes systems into Sensitive and Non-Sensitive sub-OUs. This separation aids in applying different security measures based on the sensitivity of the systems.
 * **Sub-OUs**:
- * ou=Sensitive,ou=Systems,dc=viodotcom,dc=com
- * oou=NonSensitive,ou=Systems,dc=viodotcom,dc=com
+     * ou=Sensitive,ou=Systems,dc=viodotcom,dc=com
+     * ou=NonSensitive,ou=Systems,dc=viodotcom,dc=com
 
 ### Groups OU
 * **Path**: ou=Groups,dc=viodotcom,dc=com
@@ -34,13 +53,3 @@ System-level access is managed externally through system ACLs or IAM of that par
 
 ## Conclusion
 This LDAP structure provides a streamlined and organized approach to managing users, systems, and access within Vio.com. By maintaining a clear and simplified DIT, we aim to enhance both operational efficiency and security.
-
-```mermaid
-flowchart TD
-    MS0["viodotcom-master\n(root account)"]
-    DP0["viodotcom-foo\n(account)"]
-    DP1["viodotcom-bar\n(account)"]
-
-    MS0 --> DP0
-    MS0 --> DP1
-```
