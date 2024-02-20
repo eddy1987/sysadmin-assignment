@@ -9,11 +9,11 @@ This LDAP structure is organized into three main Organizational Units (OUs): Peo
 * **Path**: ou=People,dc=viodotcom,dc=com
 * **Description**: This OU contains all individuals within the organization. It's further subdivided into an Engineering department sub-OU, which then branches into Foo, Platform, and Bar teams. This structure allows us to organize users based on their team affiliations.
 * **Sub-OUs**:
- * ou=Engineering,ou=People,dc=viodotcom,dc=com
- * ou=Foo,ou=Engineering,ou=People,dc=viodotcom,dc=com
- * ou=Platform,ou=Engineering,ou=People,dc=viodotcom,dc=com
- * ou=Bar,ou=Engineering,ou=People,dc=viodotcom,dc=com
- * 
+     * ou=Engineering,ou=People,dc=viodotcom,dc=com
+     * ou=Foo,ou=Engineering,ou=People,dc=viodotcom,dc=com
+     * ou=Platform,ou=Engineering,ou=People,dc=viodotcom,dc=com
+     * ou=Bar,ou=Engineering,ou=People,dc=viodotcom,dc=com
+
 ### Systems OU
 * **Path**: ou=Systems,dc=viodotcom,dc=com
 * **Description**: This OU categorizes systems into Sensitive and Non-Sensitive sub-OUs. This separation aids in applying different security measures based on the sensitivity of the systems.
