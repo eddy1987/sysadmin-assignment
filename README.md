@@ -3,6 +3,7 @@
 This repository contains the LDAP structure setup for Vio.com, designed to streamline user, system, and group management within the organization. Below is an overview of the Directory Information Tree (DIT), the organizational units (OUs), and their purpose within this LDAP server.
 
 ## Directory Information Tree (DIT) Overview
+
 ```mermaid
 graph TD;
     LDAP("dc=viodotcom,dc=com") --> People("ou=People")
@@ -21,7 +22,6 @@ graph TD;
     Groups --> ProductManager("cn=PM")
     Groups --> EngineeringManager("cn=EM")
     Groups --> IndivisualContributer("cn=IC")
-
 
 This LDAP structure is organized into three main Organizational Units (OUs): People, Systems, and Groups. Here's a brief outline and the rationale behind each OU
 ### People OU
