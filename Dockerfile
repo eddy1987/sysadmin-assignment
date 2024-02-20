@@ -21,4 +21,6 @@ COPY ldap/ .
 
 # Copy and run the Makefile
 COPY Makefile .
-RUN make
+
+# Since Makefile is running multiple targets () which is not possible to run during the building phase I'm commenting it out. In consideration that you will run the "make" command inside the running container (after it's being built)
+#RUN make
