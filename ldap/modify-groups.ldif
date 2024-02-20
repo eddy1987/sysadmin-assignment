@@ -1,0 +1,33 @@
+#Modify created groups by adding proper users since dynamic groups aren't supported here 
+
+# Modify TL Group
+dn: cn=TL,ou=Groups,dc=viodotcom,dc=com
+changetype: modify
+add: member
+member: uid=christian,ou=People,dc=viodotcom,dc=com
+member: uid=jessica,ou=People,dc=viodotcom,dc=com
+member: uid=ben,ou=People,dc=viodotcom,dc=com
+
+# Modify EM Group
+dn: cn=EM,ou=Groups,dc=viodotcom,dc=com
+changetype: modify
+add: member
+member: uid=charlie,ou=People,dc=viodotcom,dc=com
+member: uid=carlos,ou=People,dc=viodotcom,dc=com
+member: uid=adam,ou=People,dc=viodotcom,dc=com
+
+# Modify PM Group
+dn: cn=PM,ou=Groups,dc=viodotcom,dc=com
+changetype: modify
+add: member
+member: uid=isla,ou=People,dc=viodotcom,dc=com
+member: uid=nairobi,ou=People,dc=viodotcom,dc=com
+
+# Modify IC Group
+dn: cn=IC,ou=Groups,dc=viodotcom,dc=com
+changetype: modify
+add: member
+member: uid=dora,ou=People,dc=viodotcom,dc=com
+member: uid=amanda,ou=People,dc=viodotcom,dc=com
+member: uid=david,ou=People,dc=viodotcom,dc=com
+member: uid=jhon,ou=People,dc=viodotcom,dc=com
