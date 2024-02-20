@@ -23,6 +23,7 @@ graph TD;
     Groups --> EngineeringManager("cn=EM")
     Groups --> IndivisualContributer("cn=IC")
 
+
 This LDAP structure is organized into three main Organizational Units (OUs): People, Systems, and Groups. Here's a brief outline and the rationale behind each OU
 ### People OU
 * **Path**: ou=People,dc=viodotcom,dc=com
@@ -53,23 +54,3 @@ System-level access is managed externally through system ACLs or IAM of that par
 
 ## Conclusion
 This LDAP structure provides a streamlined and organized approach to managing users, systems, and access within Vio.com. By maintaining a clear and simplified DIT, we aim to enhance both operational efficiency and security.
-
-```mermaid
-graph TD;
-    LDAP("dc=viodotcom,dc=com") --> People("ou=People")
-    LDAP --> System("ou=System")
-    LDAP --> Groups("ou=Groups")
-
-    People --> Engineering("ou=Engineering")
-    Engineering --> Foo("ou=Foo")
-    Engineering --> Platform("ou=Platform")
-    Engineering --> Bar("ou=Bar")
-
-    System --> Sensitive("ou=Sensitive")
-    System --> NonSensitive("ou=NonSensitive")
-
-    Groups --> TechLead("cn=TL")
-    Groups --> ProductManager("cn=PM")
-    Groups --> EngineeringManager("cn=EM")
-    Groups --> IndivisualContributer("cn=IC")
-
