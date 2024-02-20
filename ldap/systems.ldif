@@ -1,0 +1,14 @@
+# Create the main container where all systems go under
+dn: ou=Systems,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Systems
+
+# Create the Sensitive sub-OU under System
+dn: ou=Sensitive,ou=Systems,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Sensitive
+
+# Create the NonSensitive sub-OU under System
+dn: ou=NonSensitive,ou=Systems,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: NonSensitive
