@@ -1,0 +1,15 @@
+# including systems to be added
+
+# Entry for AWS under Sensitive Systems
+dn: ou=AWS,ou=Sensitive,ou=Systems,dc=viodotcom,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: AWS
+description: AWS Sensitive Systems
+
+# Entry for Datadog under Non-Sensitive Systems
+dn: ou=Datadog,ou=NonSensitive,ou=Systems,dc=viodotcom,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Datadog
+description: Datadog Non-Sensitive Systems
