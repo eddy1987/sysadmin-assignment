@@ -1,0 +1,24 @@
+# Create the main container where all employee go under
+dn: ou=people,dc=viodotcom,dc=com
+objectClass: top
+objectClass: organizationalUnit
+
+# Create the Engineering OU under People
+dn: ou=Engineering,ou=People,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Engineering
+
+# Create the Platform sub-OU under Engineering
+dn: ou=Platform,ou=Engineering,ou=People,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Platform
+
+# Create the Foo sub-OU under Engineering
+dn: ou=Foo,ou=Engineering,ou=People,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Foo
+
+# Create the Bar sub-OU under Engineering
+dn: ou=Bar,ou=Engineering,ou=People,dc=viodotcom,dc=com
+objectClass: organizationalUnit
+ou: Bar
